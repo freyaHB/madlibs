@@ -10,7 +10,8 @@
 <p>
 Yesterday, there was a
 {% for animal in animals %} 
-    {{ animal }},
+    {{ animal }}
+    {% if animal != animals[-1] %}, {% endif %}
 {% endfor %}
 and {{ person }} running down the street. The {{ noun }} was {{ adjective }}, and the city wasn't the same for {{ number }} years. 
 </p>
