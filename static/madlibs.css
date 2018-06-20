@@ -1,0 +1,57 @@
+h1 {
+    color: #4CAF50;
+    text-shadow: 2px 2px black;
+    font-family: sans-serif;
+}
+
+.text {
+    color: #4CAF50;
+    text-shadow: 1px 1px black;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-boxes {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #3CBC8D;
+}
+
+#human-dog {
+    background-image: url("/static/dog-background.jpg");
+    background-repeat: repeat;
+    background-size: 25%;
+}
+
+#compliment-dog {
+    background-image: url("/static/compliment-dog.jpeg");
+    background-repeat: repeat;
+    background-size: 33%;
+}
+
+#game-dog {
+    background-image: url("/static/game-dog.png");
+    background-repeat: repeat;
+    background-size: 33%; 
+}
+
+#goodbye-dog {
+    background-image: url("/static/goodbye-dog.jpg");
+    background-repeat: repeat;
+    background-size: 100%; 
+}

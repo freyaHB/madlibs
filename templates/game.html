@@ -2,23 +2,25 @@
 <html>
 <head>
   <title>Hi There!</title>
+   <link rel="stylesheet" href="/static/madlibs.css">
 </head>
-<body>
+<body id="game-dog" class="text">
 
 <h1>Hi There!</h1>
 
 <form action="/madlib" method="POST">
-  Enter a person's name <input type="text" name="person"><br>
-  Enter a color <input type="text" name="color"><br>
-  Enter a noun <input type="text" name="noun"><br>
-  Enter an adjective <input type="text" name="adjective"><br>
-  Enter a number <input type="number" name="number"><br>
+  Enter a person's name <input type="text" name="person" class="input-boxes"><br>
+  Enter a color <input type="text" name="color" class="input-boxes"><br>
+  Enter a noun <input type="text" name="noun" class="input-boxes"><br>
+  Enter an adjective <input type="text" name="adjective" class="input-boxes"><br>
+  Enter a number <input type="number" name="number" class="input-boxes"><br>
   Check the animals you like
-  <input type="checkbox" name="animals" value="dog"> Dog
-  <input type="checkbox" name="animals" value="cat"> Cat
-  <input type="checkbox" name="animals" value="goat"> Goat
+  <input type="checkbox" name="animals" value="dog" > Dog
+  <input type="checkbox" name="animals" value="cat" > Cat
+  <input type="checkbox" name="animals" value="goat" > Goat
   <br>
-  <input type="submit">
+  <br>
+  <input type="submit" class="button">
 </form>
 
 </body>

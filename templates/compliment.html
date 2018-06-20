@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>A Compliment</title>
+  <link rel="stylesheet" href="/static/madlibs.css">
 </head>
-<body>
+<body id="compliment-dog" class="text">
     Hi {{ person }}! I think you're:
     <ul>
     {% for comp in compliment %}
@@ -14,7 +15,7 @@
     <form action="/game">
     <input type="radio" name="play_game" value="yes">Yes
      <input type="radio" name="play_game" value="no">No
-     <input type="submit">
+     <input type="submit" class="button">
     </form>
 </body>
 </html>
