@@ -1,6 +1,6 @@
 """A madlib game that compliments its users."""
 
-from random import choice
+from random import choice, sample
 
 from flask import Flask, render_template, request
 
@@ -14,6 +14,7 @@ AWESOMENESS = [
     'smashing', 'lovely',
 ]
 
+madlib_list = ['madlib.html', 'madlib-2.html']
 
 @app.route('/')
 def start_here():
@@ -35,7 +36,7 @@ def greet_person():
 
     player = request.args.get("person")
 
-    compliment = choice(AWESOMENESS)
+    compliment = sample(AWESOMENESS, 3)
 
     return render_template("compliment.html",
                            person=player,
@@ -50,21 +51,20 @@ def show_madlib_form():
         return render_template("game.html")
 
 
-@app.route('/madlib')
+@app.route('/madlib', methods=['POST'])
 def show_madlib():
 
-    name = request.args.get("person")
-    color = request.args.get("color")
-    noun = request.args.get("noun")
-    adjective = request.args.get("adjective")
-    number = request.args.get("number")
-    animals = request.args.getlist("animals")
-    animal_list = []
-    for animal in animals:
-        animal_list.append(animal)
+    name = request.form.get("person")
+    color = request.form.get("color")
+    noun = request.form.get("noun")
+    adjective = request.form.get("adjective")
+    number = request.form.get("number")
+    animals = request.form.getlist("animals")
 
-    return render_template("madlib.html", person=name, color=color, noun=noun,
-     adjective=adjective, number=number, animals=animal_list)
+    file = choice(madlib_list)
+
+    return render_template(file, person=name, color=color, noun=noun,
+        adjective=adjective, number=number, animals=animals)
 
 
 if __name__ == '__main__':
